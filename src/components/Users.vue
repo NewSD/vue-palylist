@@ -1,6 +1,6 @@
 <template>
   <div class="users">
-    <h1>Hello Users</h1>
+    <!--<h1>Hello Users</h1>-->
     <ul>
       <li v-for="user in users" v-on:click="user.show=!user.show">
         <h2>{{user.name}}</h2>
@@ -8,6 +8,8 @@
 
       </li>
     </ul>
+
+    <button v-on:click="deleteUser">删除组件</button>
   </div>
 </template>
 
@@ -24,6 +26,11 @@
     data() {
       return {
 
+      }
+    },
+    methods:{
+      deleteUser:function () {
+        this.users.pop();
       }
     }
   }
