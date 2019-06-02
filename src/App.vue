@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <users v-bind:users="users"></users>
     <users v-bind:users="users"></users>
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -26,7 +26,8 @@
           {name:"Herry",position:"Web开发",show:false},
           {name:"Herry",position:"Web开发",show:false},
           {name:"Herry",position:"Web开发",show:false},
-        ]
+        ],
+        title:"传递的是一个值,number string boolean"
       }
     },
     components: {
